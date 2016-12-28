@@ -104,7 +104,6 @@ int checkToReallocate(ArrayList* list){
 		newSize = (int)((list->occupancy / 5.0) + 1) * 5.0;
 	}
 	if(newSize != list->arraySize){
-		printf("--Reallocating to %d--\n",newSize);
 		list->arraySize = newSize;
 		list->the_array = (long*)realloc(list->the_array, newSize * sizeof(long));
 	}
