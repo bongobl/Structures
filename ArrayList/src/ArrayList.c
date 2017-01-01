@@ -85,7 +85,7 @@ long remove_List(ArrayList* list, int index){
 	}
 	
 	item_to_return = list->the_array[index];
-	for(iter = index; iter < list->occupancy; ++iter){
+	for(iter = index; iter < list->occupancy - 1; ++iter){
 		list->the_array[iter] = list->the_array[iter+1];
 	}
 	--list->occupancy;
